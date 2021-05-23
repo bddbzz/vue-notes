@@ -1,5 +1,5 @@
-# vue3-notes
-## 开发实践方面：
+# vue-notes
+## (Vue3)开发实践方面：
 - 为了支持TreeShaking，只打包入必要的API，一些API改成引入函数的形式
 - ref一般用于基本类型，reactive用于对象类型
 - getCurrentInstance 获取Vue当前实例，ctx 属性获取当前上下文` const { ctx } = getCurrentInstance();console.log(ctx.$router.currentRoute.value)`
@@ -7,7 +7,7 @@
 - props是响应式的，不能使用 ES6 解构，因为它会消除prop的响应性,如果需要解构prop，可以通过使用 setup 函数中的toRefs来安全地完成此操作`const { title } = toRefs(props)`
 - context暴露三个组件的 property{ attrs, slots, emit }
 - teleport
-## 内部优化
+## (Vue3)内部优化
 - 性能优化：虚拟dom、编译模板、Proxy数据监听、更小的打包文件
 - Composition API
 - 对TypeScript支持更好，去掉this操作，更强大的类型推导
